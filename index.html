@@ -11,10 +11,6 @@
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -88,32 +84,45 @@
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-kerry-gold overflow-hidden bg-white flex items-center justify-center p-0.5 shadow-md group-hover:scale-105 transition-transform shrink-0">
                         <!-- Official Kerry FC Crest SVG -->
                         <svg viewBox="0 0 500 500" class="w-full h-full">
+                            <!-- Outer Gold Border & Green Ring -->
                             <circle cx="250" cy="250" r="245" fill="#fdb813"/>
                             <circle cx="250" cy="250" r="235" fill="#005a36"/>
                             <circle cx="250" cy="250" r="180" fill="#ffffff"/>
+
+                            <!-- Arc Paths for Circular Text -->
                             <path id="crestTextArcTop" d="M 90,250 A 160,160 0 0,1 410,250" fill="none"/>
                             <path id="crestTextArcBottom" d="M 410,250 A 160,160 0 0,1 90,250" fill="none"/>
+
+                            <!-- Circular Text: KERRY FOOTBALL CLUB -->
                             <text font-family="'Inter', sans-serif" font-weight="900" font-size="38" fill="#ffffff" text-anchor="middle">
                                 <textPath href="#crestTextArcTop" startOffset="50%">KERRY</textPath>
                             </text>
                             <text font-family="'Inter', sans-serif" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">
                                 <textPath href="#crestTextArcBottom" startOffset="50%">FOOTBALL CLUB</textPath>
                             </text>
+
+                            <!-- Side Dots -->
                             <circle cx="95" cy="250" r="16" fill="#005a36"/>
                             <circle cx="405" cy="250" r="16" fill="#005a36"/>
+
+                            <!-- Inner Shield Container -->
                             <g clip-path="url(#innerShieldClip)">
                                 <circle cx="250" cy="250" r="170" fill="#ffffff"/>
+                                <!-- Green Stripes -->
                                 <rect x="110" y="80" width="40" height="340" fill="#005a36"/>
                                 <rect x="190" y="80" width="40" height="340" fill="#005a36"/>
                                 <rect x="270" y="80" width="40" height="340" fill="#005a36"/>
                                 <rect x="350" y="80" width="40" height="340" fill="#005a36"/>
                             </g>
                             <circle cx="250" cy="250" r="170" fill="none" stroke="#005a36" stroke-width="8"/>
+
                             <defs>
                                 <clipPath id="innerShieldClip">
                                     <circle cx="250" cy="250" r="166"/>
                                 </clipPath>
                             </defs>
+
+                            <!-- Golden Crown -->
                             <g id="crown">
                                 <path d="M 195,155 L 200,105 L 225,135 L 250,100 L 275,135 L 300,105 L 305,155 Z" fill="#fdb813" stroke="#005a36" stroke-width="3"/>
                                 <rect x="195" y="155" width="110" height="12" fill="#005a36"/>
@@ -121,6 +130,8 @@
                                 <circle cx="250" cy="97" r="4" fill="#fdb813"/>
                                 <circle cx="300" cy="102" r="4" fill="#fdb813"/>
                             </g>
+
+                            <!-- Irish Harp Center Motif -->
                             <g id="irishHarp" stroke="#005a36" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M 188,185 C 220,170 280,170 315,225 C 300,280 270,350 228,375 C 220,380 215,365 210,355 C 190,310 170,240 188,185 Z" fill="#ffffff" stroke-width="6"/>
                                 <path d="M 188,185 C 205,190 230,220 220,280 C 215,310 200,345 180,360 C 172,340 178,250 188,185 Z" fill="#005a36" stroke-width="4"/>
@@ -129,6 +140,7 @@
                                 <circle cx="230" cy="193" r="4" fill="#fdb813" stroke="none"/>
                                 <circle cx="250" cy="195" r="4" fill="#fdb813" stroke="none"/>
                                 <circle cx="270" cy="202" r="4" fill="#fdb813" stroke="none"/>
+
                                 <line x1="205" y1="200" x2="200" y2="335" stroke="#005a36" stroke-width="3"/>
                                 <line x1="215" y1="198" x2="212" y2="345" stroke="#005a36" stroke-width="3"/>
                                 <line x1="225" y1="196" x2="225" y2="355" stroke="#005a36" stroke-width="3"/>
@@ -152,34 +164,28 @@
 
                 <!-- Desktop Navigation Tabs -->
                 <nav class="hidden lg:flex items-center gap-1">
-                    <button onclick="navigateTo('overview')" id="nav-overview" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-kerry-gold bg-kerry-cardBg">
+                    <button onclick="navigateTo('overview')" id="nav-overview" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-kerry-gold bg-kerry-cardBg">
                         <i class="fa-solid fa-compass mr-1.5 text-kerry-gold"></i> Overview
                     </button>
-                    <button onclick="navigateTo('schedule')" id="nav-schedule" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
+                    <button onclick="navigateTo('schedule')" id="nav-schedule" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
                         <i class="fa-solid fa-calendar-days mr-1.5 text-kerry-gold"></i> Schedule
                     </button>
-                    <button onclick="navigateTo('runs')" id="nav-runs" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
+                    <button onclick="navigateTo('runs')" id="nav-runs" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
                         <i class="fa-solid fa-person-running mr-1.5 text-kerry-gold"></i> Pitch Runs
                     </button>
-                    <button onclick="navigateTo('gym')" id="nav-gym" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
+                    <button onclick="navigateTo('gym')" id="nav-gym" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
                         <i class="fa-solid fa-dumbbell mr-1.5 text-kerry-gold"></i> Gym Sessions
                     </button>
-                    <button onclick="navigateTo('nutrition')" id="nav-nutrition" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
+                    <button onclick="navigateTo('nutrition')" id="nav-nutrition" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
                         <i class="fa-solid fa-utensils mr-1.5 text-kerry-gold"></i> Nutrition
                     </button>
-                    <button onclick="navigateTo('targets')" id="nav-targets" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
+                    <button onclick="navigateTo('targets')" id="nav-targets" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-gray-300 hover:text-white hover:bg-kerry-cardBg">
                         <i class="fa-solid fa-bullseye mr-1.5 text-kerry-gold"></i> Targets & Compliance
-                    </button>
-                    <button onclick="promptCoachLogin()" id="nav-coach" class="nav-btn text-xs font-extrabold px-3 py-2.5 rounded-lg transition-all text-red-400 hover:text-white hover:bg-red-950/50 border border-red-900/40">
-                        <i class="fa-solid fa-lock mr-1.5 text-red-400"></i> Coach Portal
                     </button>
                 </nav>
 
                 <!-- Mobile Navigation Toggle Button -->
-                <div class="lg:hidden flex items-center gap-2">
-                    <button onclick="promptCoachLogin()" class="bg-red-950/60 text-red-300 p-2.5 rounded-lg border border-red-800 text-xs font-bold">
-                        <i class="fa-solid fa-lock"></i> Coach
-                    </button>
+                <div class="lg:hidden flex items-center">
                     <button onclick="toggleMobileMenu()" class="bg-kerry-cardBg text-kerry-gold p-2.5 rounded-lg border border-kerry-cardBorder text-base hover:text-white focus:outline-none">
                         <i class="fa-solid fa-bars"></i>
                     </button>
@@ -196,13 +202,14 @@
             <button onclick="navigateTo('gym'); toggleMobileMenu();" class="block w-full text-left font-bold py-2.5 px-3 text-gray-200 hover:bg-kerry-cardBg rounded-lg"><i class="fa-solid fa-dumbbell text-kerry-gold mr-2.5"></i> Gym Sessions</button>
             <button onclick="navigateTo('nutrition'); toggleMobileMenu();" class="block w-full text-left font-bold py-2.5 px-3 text-gray-200 hover:bg-kerry-cardBg rounded-lg"><i class="fa-solid fa-utensils text-kerry-gold mr-2.5"></i> Nutrition</button>
             <button onclick="navigateTo('targets'); toggleMobileMenu();" class="block w-full text-left font-bold py-2.5 px-3 text-gray-200 hover:bg-kerry-cardBg rounded-lg"><i class="fa-solid fa-bullseye text-kerry-gold mr-2.5"></i> Targets & Compliance</button>
-            <button onclick="promptCoachLogin(); toggleMobileMenu();" class="block w-full text-left font-bold py-2.5 px-3 text-red-400 hover:bg-red-950/40 rounded-lg"><i class="fa-solid fa-lock text-red-400 mr-2.5"></i> Coach Portal</button>
         </div>
     </header>
 
 
     <!-- ==================== TAB 1: OVERVIEW ==================== -->
     <section id="screen-overview" class="app-screen active max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
+        <!-- Hero Box -->
         <div class="relative rounded-3xl overflow-hidden border border-kerry-cardBorder bg-gradient-to-b from-kerry-greenDark/90 via-kerry-navy to-kerry-navy p-6 sm:p-10 shadow-2xl mb-8">
             <div class="max-w-3xl relative z-10">
                 <div class="inline-flex items-center gap-2 bg-kerry-gold text-kerry-navy px-3.5 py-1 rounded-full text-xs font-black tracking-wider uppercase mb-4 shadow-lg">
@@ -214,6 +221,7 @@
                     <span class="text-kerry-gold uppercase">PROGRAMME 2026</span>
                 </h1>
 
+                <!-- Core Objective Card -->
                 <div class="mt-6 p-5 rounded-2xl bg-kerry-cardBg/90 border border-kerry-gold/50 shadow-xl gold-glow">
                     <span class="text-[10px] font-black uppercase text-kerry-gold tracking-widest block mb-1">
                         <i class="fa-solid fa-bullseye mr-1"></i> OFF-SEASON OBJECTIVE
@@ -223,6 +231,7 @@
                     </h2>
                 </div>
 
+                <!-- Key Dates Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     <div class="bg-kerry-navy/80 p-4 rounded-xl border border-kerry-cardBorder flex items-center gap-3">
                         <div class="w-10 h-10 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-700 flex items-center justify-center text-lg shrink-0">
@@ -244,9 +253,11 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
+        <!-- Weekly Structure Overview Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                 <div class="w-10 h-10 rounded-xl bg-kerry-green text-kerry-gold font-black text-lg flex items-center justify-center mb-4">1</div>
@@ -275,11 +286,13 @@
                 </p>
             </div>
         </div>
+
     </section>
 
 
     <!-- ==================== TAB 2: SCHEDULE ==================== -->
     <section id="screen-schedule" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
         <div class="mb-6">
             <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">OFF SEASON</span>
             <h2 class="text-2xl font-black text-white mt-1">5-WEEK SCHEDULE</h2>
@@ -302,7 +315,8 @@
                         </tr>
                     </thead>
                     <tbody class="text-xs font-semibold divide-y divide-kerry-cardBorder">
-                        <!-- WEEK 1 -->
+                        
+                        <!-- WEEK 1 (Gym Only) -->
                         <tr class="hover:bg-kerry-navy/50 transition-colors">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80">
                                 <div class="font-extrabold text-white">WEEK 1</div>
@@ -310,27 +324,35 @@
                                 <div class="text-[9px] text-kerry-gold font-bold mt-1 uppercase">REMOTE TRAINING</div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym('lower', 1)" class="w-full text-left p-2.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                <button onclick="goToGym('lower')" class="w-full text-left p-2.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                     <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Lower Body
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym('upper', 1)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                <div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym('upper')" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
                                     <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper & Core
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym('lower', 1)" class="w-full text-left p-2.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                <div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym('lower')" class="w-full text-left p-2.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                     <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Full Body
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
-                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div>
+                            </td>
+                            <td class="p-2 text-center">
+                                <div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div>
+                            </td>
                         </tr>
 
-                        <!-- WEEK 2 -->
+                        <!-- WEEK 2 (5km Run + Gym) -->
                         <tr class="hover:bg-kerry-navy/50 transition-colors">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80">
                                 <div class="font-extrabold text-white">WEEK 2</div>
@@ -339,27 +361,27 @@
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('5km', 2)" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToRun('5km')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
                                     </button>
-                                    <button onclick="goToGym('lower', 2)" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToGym('lower')" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Lower Body
                                     </button>
                                 </div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym('upper', 2)" class="w-full text-left p-2 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                <button onclick="goToGym('upper')" class="w-full text-left p-2 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
                                     <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper & Core
                                 </button>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('5km', 2)" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToRun('5km')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
                                     </button>
-                                    <button onclick="goToGym('lower', 2)" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToGym('lower')" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Full Body
                                     </button>
                                 </div>
@@ -368,7 +390,7 @@
                             <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
                         </tr>
 
-                        <!-- WEEK 3 -->
+                        <!-- WEEK 3 (Interval Runs 1 & 2) -->
                         <tr class="hover:bg-kerry-navy/50 transition-colors">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80">
                                 <div class="font-extrabold text-white">WEEK 3</div>
@@ -377,27 +399,27 @@
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('int1', 3)" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToRun('int1')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 1
                                     </button>
-                                    <button onclick="goToGym('lower', 3)" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToGym('lower')" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Lower Body
                                     </button>
                                 </div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym('upper', 3)" class="w-full text-left p-2 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                <button onclick="goToGym('upper')" class="w-full text-left p-2 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
                                     <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper & Core
                                 </button>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('int2', 3)" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToRun('int2')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 2
                                     </button>
-                                    <button onclick="goToGym('lower', 3)" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <button onclick="goToGym('lower')" class="w-full text-left p-1.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold transition-all hover:scale-105 shadow">
                                         <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Full Body
                                     </button>
                                 </div>
@@ -406,46 +428,79 @@
                             <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
                         </tr>
 
-                        <!-- WEEK 4 -->
+                        <!-- WEEK 4 (On-Site Pitch & Gym Static Text) -->
                         <tr class="hover:bg-kerry-navy/50 transition-colors">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80">
                                 <div class="font-extrabold text-white">WEEK 4</div>
                                 <div class="text-[10px] text-gray-400">Dec 07 – Dec 13</div>
                                 <div class="text-[9px] text-emerald-400 font-bold mt-1 uppercase">ON-SITE TRAINING</div>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
                             <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
                         </tr>
 
-                        <!-- WEEK 5 -->
+                        <!-- WEEK 5 (Pitch & Gym + Saturday Pitch Session Only) -->
                         <tr class="hover:bg-kerry-navy/50 transition-colors">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80">
                                 <div class="font-extrabold text-white">WEEK 5</div>
                                 <div class="text-[10px] text-gray-400">Dec 14 – Dec 20</div>
                                 <div class="text-[9px] text-emerald-400 font-bold mt-1 uppercase">ON-SITE TRAINING</div>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-amber-950/80 text-kerry-gold text-[10px] font-extrabold border border-kerry-gold/60 shadow">Pitch Session</div></td>
-                            <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">
+                                    Pitch & Gym
+                                </div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="p-2.5 rounded-lg bg-amber-950/80 text-kerry-gold text-[10px] font-extrabold border border-kerry-gold/60 shadow">
+                                    Pitch Session
+                                </div>
+                            </td>
+                            <td class="p-2 text-center">
+                                <div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div>
+                            </td>
                         </tr>
+
                     </tbody>
                 </table>
             </div>
         </div>
+
     </section>
 
 
     <!-- ==================== TAB 3: PITCH RUNS ==================== -->
     <section id="screen-runs" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
         <div class="mb-4">
             <button onclick="navigateTo('schedule')" class="inline-flex items-center gap-2 bg-kerry-cardBg hover:bg-kerry-greenDark text-kerry-gold hover:text-white px-4 py-2 rounded-xl border border-kerry-cardBorder hover:border-kerry-gold text-xs font-bold transition-all shadow-lg hover:scale-105">
                 <i class="fa-solid fa-arrow-left"></i> Back to Schedule
@@ -459,6 +514,7 @@
                 <p class="text-xs text-gray-400 mt-0.5">Mandatory directive: Complete pitch running <strong>BEFORE</strong> gym lifting.</p>
             </div>
 
+            <!-- Sub-Tab Switcher -->
             <div class="flex items-center bg-kerry-navy p-1 rounded-xl border border-kerry-cardBorder">
                 <button onclick="switchRunTab('5km')" id="run-tab-5km" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md">5km Run</button>
                 <button onclick="switchRunTab('int1')" id="run-tab-int1" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white">Interval Run 1</button>
@@ -476,10 +532,12 @@
                         <span class="text-[10px] text-gray-400 uppercase font-bold block" id="cardLabel1">Session Type</span>
                         <span class="text-lg font-black text-white" id="cardVal1">Continuous Aerobic</span>
                     </div>
+
                     <div class="bg-emerald-950/90 p-4 rounded-xl border border-emerald-700">
                         <span class="text-[10px] text-gray-400 uppercase font-bold block" id="cardLabel2">Time Window Target</span>
                         <span class="text-lg font-black text-kerry-gold" id="cardVal2">20 – 22 Mins</span>
                     </div>
+
                     <div class="bg-emerald-950/90 p-4 rounded-xl border border-emerald-700">
                         <span class="text-[10px] text-gray-400 uppercase font-bold block" id="cardLabel3">Total Distance Goal</span>
                         <span class="text-lg font-black text-white" id="cardVal3">5.0 Kilometers</span>
@@ -497,11 +555,13 @@
                 </p>
             </div>
         </div>
+
     </section>
 
 
-    <!-- ==================== TAB 4: GYM SESSIONS (WITH WEIGHT LOGGING) ==================== -->
+    <!-- ==================== TAB 4: GYM SESSIONS ==================== -->
     <section id="screen-gym" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
         <div class="mb-4">
             <button onclick="navigateTo('schedule')" class="inline-flex items-center gap-2 bg-kerry-cardBg hover:bg-kerry-greenDark text-kerry-gold hover:text-white px-4 py-2 rounded-xl border border-kerry-cardBorder hover:border-kerry-gold text-xs font-bold transition-all shadow-lg hover:scale-105">
                 <i class="fa-solid fa-arrow-left"></i> Back to Schedule
@@ -529,109 +589,45 @@
                     <i class="fa-solid fa-dumbbell text-kerry-gold"></i> SESSION 1: LOWER BODY STRENGTH & HYPERTROPHY
                 </h3>
 
-                <!-- FIXED SCROLLING WEEK SELECTOR FOR MOBILE (NO CUT-OFF) -->
-                <div class="mb-6 p-4 rounded-xl bg-kerry-navy border border-kerry-cardBorder">
-                    <span class="text-xs font-bold text-kerry-gold block mb-2"><i class="fa-solid fa-calendar-days mr-1.5"></i> SELECT TRAINING WEEK TO LOG:</span>
-                    <div class="flex items-center gap-2 overflow-x-auto pb-2">
-                        <button onclick="setLogWeek(1)" id="log-week-1" class="px-4 py-2 rounded bg-kerry-green text-white text-xs font-extrabold shrink-0 shadow">Week 1</button>
-                        <button onclick="setLogWeek(2)" id="log-week-2" class="px-4 py-2 rounded bg-kerry-cardBg text-gray-300 text-xs font-extrabold shrink-0 border border-kerry-cardBorder">Week 2</button>
-                        <button onclick="setLogWeek(3)" id="log-week-3" class="px-4 py-2 rounded bg-kerry-cardBg text-gray-300 text-xs font-extrabold shrink-0 border border-kerry-cardBorder">Week 3</button>
-                        <button onclick="setLogWeek(4)" id="log-week-4" class="px-4 py-2 rounded bg-kerry-cardBg text-gray-300 text-xs font-extrabold shrink-0 border border-kerry-cardBorder">Week 4</button>
-                        <button onclick="setLogWeek(5)" id="log-week-5" class="px-4 py-2 rounded bg-kerry-cardBg text-gray-300 text-xs font-extrabold shrink-0 border border-kerry-cardBorder">Week 5</button>
-                    </div>
-                </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Exercise 1 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <h4 class="text-sm font-bold text-kerry-gold">Hex Bar Squat / Front Squat</h4>
-                                <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3-4 Sets x 6-8 Reps</span>
-                            </div>
-                            <a href="https://www.youtube.com/watch?v=M-3wmzwsUxc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mb-4">
-                                <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
-                            </a>
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-sm font-bold text-kerry-gold">Hex Bar Squat / Front Squat</h4>
+                            <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3-4 Sets x 6-8 Reps</span>
                         </div>
-                        <div class="bg-kerry-cardBg p-3 rounded-lg border border-kerry-cardBorder">
-                            <label class="text-[11px] font-bold text-gray-300 block mb-2"><i class="fa-solid fa-weight-hanging text-kerry-gold mr-1"></i> Log Working Weight:</label>
-                            <div class="grid grid-cols-2 gap-2 mb-2">
-                                <input type="text" id="name-hex" placeholder="Player Name" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                                <input type="number" id="weight-hex" placeholder="Weight (kg)" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                            </div>
-                            <button onclick="submitPlayerWeight('Hex Bar / Front Squat', 'name-hex', 'weight-hex')" class="w-full bg-kerry-gold hover:bg-kerry-goldDark text-kerry-navy font-black text-xs py-1.5 rounded transition-all shadow">
-                                <i class="fa-solid fa-floppy-disk mr-1"></i> Save Weight
-                            </button>
-                        </div>
+                        <a href="https://www.youtube.com/watch?v=M-3wmzwsUxc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mt-2">
+                            <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
+                        </a>
                     </div>
 
-                    <!-- Exercise 2 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <h4 class="text-sm font-bold text-kerry-gold">Single-Leg RDL (Dumbbell)</h4>
-                                <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets x 8 Reps / leg</span>
-                            </div>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mb-4">
-                                <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
-                            </a>
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-sm font-bold text-kerry-gold">Single-Leg RDL (Dumbbell)</h4>
+                            <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets x 8 Reps / leg</span>
                         </div>
-                        <div class="bg-kerry-cardBg p-3 rounded-lg border border-kerry-cardBorder">
-                            <label class="text-[11px] font-bold text-gray-300 block mb-2"><i class="fa-solid fa-weight-hanging text-kerry-gold mr-1"></i> Log Working Weight:</label>
-                            <div class="grid grid-cols-2 gap-2 mb-2">
-                                <input type="text" id="name-rdl" placeholder="Player Name" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                                <input type="number" id="weight-rdl" placeholder="Weight (kg)" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                            </div>
-                            <button onclick="submitPlayerWeight('Single-Leg RDL', 'name-rdl', 'weight-rdl')" class="w-full bg-kerry-gold hover:bg-kerry-goldDark text-kerry-navy font-black text-xs py-1.5 rounded transition-all shadow">
-                                <i class="fa-solid fa-floppy-disk mr-1"></i> Save Weight
-                            </button>
-                        </div>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mt-2">
+                            <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
+                        </a>
                     </div>
 
-                    <!-- Exercise 3 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <h4 class="text-sm font-bold text-kerry-gold">Adductor Squat & Side Lunge</h4>
-                                <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets x 8 Reps / side</span>
-                            </div>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mb-4">
-                                <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
-                            </a>
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-sm font-bold text-kerry-gold">Adductor Squat & Side Lunge</h4>
+                            <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets x 8 Reps / side</span>
                         </div>
-                        <div class="bg-kerry-cardBg p-3 rounded-lg border border-kerry-cardBorder">
-                            <label class="text-[11px] font-bold text-gray-300 block mb-2"><i class="fa-solid fa-weight-hanging text-kerry-gold mr-1"></i> Log Working Weight:</label>
-                            <div class="grid grid-cols-2 gap-2 mb-2">
-                                <input type="text" id="name-add" placeholder="Player Name" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                                <input type="number" id="weight-add" placeholder="Weight (kg)" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                            </div>
-                            <button onclick="submitPlayerWeight('Adductor Squat', 'name-add', 'weight-add')" class="w-full bg-kerry-gold hover:bg-kerry-goldDark text-kerry-navy font-black text-xs py-1.5 rounded transition-all shadow">
-                                <i class="fa-solid fa-floppy-disk mr-1"></i> Save Weight
-                            </button>
-                        </div>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mt-2">
+                            <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
+                        </a>
                     </div>
 
-                    <!-- Exercise 4 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <h4 class="text-sm font-bold text-kerry-gold">Glute Capacity Circuit</h4>
-                                <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets Tempo Block</span>
-                            </div>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mb-4">
-                                <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
-                            </a>
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-sm font-bold text-kerry-gold">Glute Capacity Circuit</h4>
+                            <span class="text-[10px] bg-kerry-cardBorder px-2 py-0.5 rounded font-bold text-gray-300">3 Sets Tempo Block</span>
                         </div>
-                        <div class="bg-kerry-cardBg p-3 rounded-lg border border-kerry-cardBorder">
-                            <label class="text-[11px] font-bold text-gray-300 block mb-2"><i class="fa-solid fa-weight-hanging text-kerry-gold mr-1"></i> Log Working Weight:</label>
-                            <div class="grid grid-cols-2 gap-2 mb-2">
-                                <input type="text" id="name-glute" placeholder="Player Name" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                                <input type="number" id="weight-glute" placeholder="Weight (kg)" class="bg-kerry-navy border border-kerry-cardBorder rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-kerry-gold">
-                            </div>
-                            <button onclick="submitPlayerWeight('Glute Capacity', 'name-glute', 'weight-glute')" class="w-full bg-kerry-gold hover:bg-kerry-goldDark text-kerry-navy font-black text-xs py-1.5 rounded transition-all shadow">
-                                <i class="fa-solid fa-floppy-disk mr-1"></i> Save Weight
-                            </button>
-                        </div>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-kerry-green/80 hover:bg-kerry-green text-white text-xs font-bold py-2 px-3 rounded-lg border border-emerald-600 transition-colors w-full mt-2">
+                            <i class="fa-solid fa-circle-play text-kerry-gold"></i> 🎬 Watch Exercise Video
+                        </a>
                     </div>
                 </div>
             </div>
@@ -725,11 +721,13 @@
                 </div>
             </div>
         </div>
+
     </section>
 
 
     <!-- ==================== TAB 5: NUTRITION ==================== -->
     <section id="screen-nutrition" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
         <div class="mb-6">
             <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">HYPERTROPHY NUTRITION</span>
             <h2 class="text-2xl font-black text-white mt-1">NUTRITION & RECOVERY DIRECTIVES</h2>
@@ -737,6 +735,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            
+            <!-- DO'S -->
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-emerald-800/60 shadow-xl">
                 <h3 class="text-base font-extrabold text-emerald-400 flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-circle-check"></i> OFF-SEASON DO'S
@@ -744,19 +744,20 @@
                 <ul class="space-y-3 text-xs text-gray-200">
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                        <span><strong>Prioritize Protein Intake:</strong> Consume 1.8g – 2.2g of protein per kg of body weight daily.</span>
+                        <span><strong>Prioritize Protein Intake:</strong> Consume 1.8g – 2.2g of protein per kg of body weight daily (chicken, beef, eggs, fish, dairy).</span>
                     </li>
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                        <span><strong>Carbohydrate Timing:</strong> Eat quality carbs before and immediately after sessions.</span>
+                        <span><strong>Carbohydrate Timing:</strong> Eat quality carbs (oats, rice, potatoes) before and immediately after running and lifting sessions.</span>
                     </li>
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                        <span><strong>Hydration Standards:</strong> Drink 3.5L to 4L of water daily.</span>
+                        <span><strong>Hydration Standards:</strong> Drink 3.5L to 4L of water daily to maintain cellular hydration and explosive muscular power output.</span>
                     </li>
                 </ul>
             </div>
 
+            <!-- DON'TS -->
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-red-800/60 shadow-xl">
                 <h3 class="text-base font-extrabold text-red-400 flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-circle-xmark"></i> OFF-SEASON DON'TS
@@ -764,40 +765,46 @@
                 <ul class="space-y-3 text-xs text-gray-200">
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                        <span><strong>DON'T Skip Meals:</strong> Maintain positive energy balance.</span>
+                        <span><strong>DON'T Skip Meals:</strong> Muscle hypertrophy and power gains require positive energy balance. Do not skip post-workout meals.</span>
                     </li>
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                        <span><strong>DON'T Rely on Junk Calories:</strong> Avoid ultra-processed foods.</span>
+                        <span><strong>DON'T Rely on Junk Calories:</strong> Avoid ultra-processed foods that increase body fat without contributing nutrient density.</span>
                     </li>
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                        <span><strong>DON'T Excessively Consume Alcohol:</strong> Disrupts muscle protein synthesis.</span>
+                        <span><strong>DON'T Excessively Consume Alcohol:</strong> Alcohol disrupts muscle protein synthesis and impairs REM sleep recovery.</span>
                     </li>
                 </ul>
             </div>
+
         </div>
 
+        <!-- Hand Portion Guidelines -->
         <div class="bg-gradient-to-r from-kerry-navy via-kerry-cardBg to-kerry-navy p-6 rounded-2xl border border-kerry-gold/40 shadow-xl">
             <h3 class="text-lg font-extrabold text-white flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-hand text-kerry-gold"></i> PORTION SIZE GUIDELINES FOR HYPERTROPHY
             </h3>
+
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                 <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder">
                     <div class="w-10 h-10 rounded-full bg-red-950 text-red-400 border border-red-800 flex items-center justify-center font-black mx-auto mb-2">2x</div>
                     <h4 class="text-xs font-extrabold text-white">PROTEIN</h4>
                     <p class="text-[11px] text-gray-400 mt-1">2 Palm-sized portions per main meal</p>
                 </div>
+
                 <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder">
                     <div class="w-10 h-10 rounded-full bg-amber-950 text-amber-400 border border-amber-800 flex items-center justify-center font-black mx-auto mb-2">2x</div>
                     <h4 class="text-xs font-extrabold text-white">CARBOHYDRATES</h4>
                     <p class="text-[11px] text-gray-400 mt-1">2 Cupped hands per main meal</p>
                 </div>
+
                 <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder">
                     <div class="w-10 h-10 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 flex items-center justify-center font-black mx-auto mb-2">2x</div>
                     <h4 class="text-xs font-extrabold text-white">VEGETABLES</h4>
                     <p class="text-[11px] text-gray-400 mt-1">2 Fist-sized portions per main meal</p>
                 </div>
+
                 <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder">
                     <div class="w-10 h-10 rounded-full bg-blue-950 text-blue-400 border border-blue-800 flex items-center justify-center font-black mx-auto mb-2">2x</div>
                     <h4 class="text-xs font-extrabold text-white">HEALTHY FATS</h4>
@@ -805,11 +812,13 @@
                 </div>
             </div>
         </div>
+
     </section>
 
 
     <!-- ==================== TAB 6: TARGETS & COMPLIANCE ==================== -->
     <section id="screen-targets" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
+        
         <div class="bg-gradient-to-r from-red-950/60 via-kerry-cardBg to-red-950/60 p-6 sm:p-8 rounded-3xl border border-red-800/60 shadow-2xl">
             <div class="flex items-center gap-3 mb-6">
                 <div class="w-12 h-12 rounded-2xl bg-red-900/60 border border-red-700 flex items-center justify-center text-red-300 text-2xl shrink-0">
@@ -822,6 +831,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- RIPT App Tracking -->
                 <div class="bg-kerry-navy p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                     <div class="flex items-center gap-2 mb-3">
                         <i class="fa-solid fa-mobile-screen-button text-kerry-gold text-xl"></i>
@@ -830,8 +841,13 @@
                     <p class="text-xs text-gray-300 leading-relaxed">
                         Every player must log their workout completion via the official <strong>RIPT App</strong> at the end of every scheduled training day.
                     </p>
+                    <div class="mt-4 p-3.5 bg-kerry-cardBg rounded-xl border border-kerry-cardBorder text-xs text-emerald-400 font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-kerry-gold"></i>
+                        <span>Mandatory daily logging (No financial fines attached).</span>
+                    </div>
                 </div>
 
+                <!-- Body Fat Rule (<= 14%) -->
                 <div class="bg-kerry-navy p-6 rounded-2xl border border-red-800/60 shadow-xl">
                     <div class="flex items-center gap-2 mb-3">
                         <i class="fa-solid fa-weight-scale text-red-400 text-xl"></i>
@@ -842,45 +858,13 @@
                     </p>
                     <div class="mt-4 p-3.5 bg-red-950/90 rounded-xl border border-red-700 text-xs text-red-200 font-bold flex items-center gap-2">
                         <i class="fa-solid fa-triangle-exclamation text-kerry-gold"></i>
-                        <span>Exceeding 14% incurs an immediate 1-WEEK WAGE FINE.</span>
+                        <span>STRICT RULE: Body fat exceeding 14% incurs an immediate 1-WEEK WAGE FINE.</span>
                     </div>
                 </div>
+
             </div>
         </div>
-    </section>
 
-
-    <!-- ==================== TAB 7: COACH PORTAL (PIN PROTECTED) ==================== -->
-    <section id="screen-coach" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
-        <div class="flex items-center justify-between mb-6">
-            <div>
-                <span class="bg-red-900 text-red-200 text-[10px] font-black px-2 py-0.5 rounded uppercase">COACHES ONLY</span>
-                <h2 class="text-2xl font-black text-white mt-1">PLAYER WEIGHT PROGRESSION DASHBOARD</h2>
-                <p class="text-xs text-gray-400 mt-0.5">Live tracking across the 5-week off-season block.</p>
-            </div>
-            <button onclick="navigateTo('overview')" class="bg-kerry-cardBg text-kerry-gold px-4 py-2 rounded-xl border border-kerry-cardBorder text-xs font-bold">Exit Dashboard</button>
-        </div>
-
-        <div class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-2xl">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse min-w-[700px]">
-                    <thead>
-                        <tr class="bg-kerry-navy border-b border-kerry-cardBorder text-[11px] font-extrabold text-kerry-gold uppercase tracking-wider">
-                            <th class="p-3.5 border-r border-kerry-cardBorder">Player Name</th>
-                            <th class="p-3.5 border-r border-kerry-cardBorder">Exercise</th>
-                            <th class="p-3.5 border-r border-kerry-cardBorder text-center">Week</th>
-                            <th class="p-3.5 border-r border-kerry-cardBorder text-center">Weight Logged</th>
-                            <th class="p-3.5 text-center">Timestamp</th>
-                        </tr>
-                    </thead>
-                    <tbody id="coach-weights-table" class="text-xs font-semibold divide-y divide-kerry-cardBorder">
-                        <tr>
-                            <td colspan="5" class="p-6 text-center text-gray-400">Loading player tracking logs from Firebase...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </section>
 
 
@@ -893,139 +877,41 @@
     </footer>
 
 
-    <!-- JAVASCRIPT & FIREBASE CONFIG -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Your exact Firebase configuration keys
-        const firebaseConfig = {
-            apiKey: "AIzaSyA3FlYlPUCYmv_GdKM6G3h-5ZQ8TrHqSpA",
-            authDomain: "kerryfc-portal.firebaseapp.com",
-            projectId: "kerryfc-portal",
-            storageBucket: "kerryfc-portal.firebasestorage.app",
-            messagingSenderId: "363525444183",
-            appId: "1:363525444183:web:2ff41790125e5a191a0912",
-            measurementId: "G-NCN9H5ZBWR"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
-        let selectedLogWeek = 1;
-
-        function setLogWeek(wk) {
-            selectedLogWeek = wk;
-            for (let i = 1; i <= 5; i++) {
-                const btn = document.getElementById(`log-week-${i}`);
-                if (btn) {
-                    if (i === wk) {
-                        btn.className = "px-4 py-2 rounded bg-kerry-green text-white text-xs font-extrabold shrink-0 shadow";
-                    } else {
-                        btn.className = "px-4 py-2 rounded bg-kerry-cardBg text-gray-300 text-xs font-extrabold shrink-0 border border-kerry-cardBorder";
-                    }
-                }
-            }
-        }
-
-        // UPSERT LOGIC: Uses unique document IDs per Player + Exercise + Week to prevent duplicate logging
-        function submitPlayerWeight(exerciseName, nameInputId, weightInputId) {
-            const playerName = document.getElementById(nameInputId).value.trim();
-            const weightVal = document.getElementById(weightInputId).value.trim();
-
-            if (!playerName || !weightVal) {
-                alert("Please enter both your name and working weight.");
-                return;
-            }
-
-            const cleanName = playerName.replace(/[^a-zA-Z0-9]/g, "");
-            const cleanEx = exerciseName.replace(/[^a-zA-Z0-9]/g, "");
-            const docId = `${cleanName}_${cleanEx}_Wk${selectedLogWeek}`;
-
-            db.collection("gym_logs").doc(docId).set({
-                player: playerName,
-                exercise: exerciseName,
-                weight: Number(weightVal),
-                week: selectedLogWeek,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            })
-            .then(() => {
-                alert(`Successfully saved ${weightVal}kg for ${playerName} (Week ${selectedLogWeek}).`);
-                document.getElementById(weightInputId).value = "";
-            })
-            .catch((error) => {
-                console.error("Error saving weight: ", error);
-                alert("Error saving weight. Check your Firebase credentials.");
-            });
-        }
-
-        function promptCoachLogin() {
-            const pin = prompt("Enter Coach Access PIN:");
-            if (pin === "1907") {
-                navigateTo('coach');
-                loadCoachDashboard();
-            } else if (pin !== null) {
-                alert("Incorrect PIN.");
-            }
-        }
-
-        function loadCoachDashboard() {
-            const tbody = document.getElementById('coach-weights-table');
-            tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-gray-400">Fetching logs...</td></tr>`;
-
-            db.collection("gym_logs").orderBy("week", "asc").get()
-                .then((querySnapshot) => {
-                    if (querySnapshot.empty) {
-                        tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-gray-400">No weight logs recorded yet.</td></tr>`;
-                        return;
-                    }
-                    let html = "";
-                    querySnapshot.forEach((doc) => {
-                        const data = doc.data();
-                        const timeStr = data.timestamp ? data.timestamp.toDate().toLocaleString() : "Just now";
-                        html += `
-                            <tr class="hover:bg-kerry-navy/50">
-                                <td class="p-3.5 border-r border-kerry-cardBorder font-bold text-white">${data.player}</td>
-                                <td class="p-3.5 border-r border-kerry-cardBorder text-kerry-gold">${data.exercise}</td>
-                                <td class="p-3.5 border-r border-kerry-cardBorder text-center"><span class="bg-kerry-green/40 px-2 py-0.5 rounded text-emerald-300 font-bold">Week ${data.week}</span></td>
-                                <td class="p-3.5 border-r border-kerry-cardBorder text-center font-black text-white text-sm">${data.weight} kg</td>
-                                <td class="p-3.5 text-center text-gray-400 text-[11px]">${timeStr}</td>
-                            </tr>
-                        `;
-                    });
-                    tbody.innerHTML = html;
-                })
-                .catch((error) => {
-                    console.error("Error loading logs: ", error);
-                    tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-red-400">Error connecting to database.</td></tr>`;
-                });
-        }
-
         // Tab Navigation Logic
         function navigateTo(screenId) {
             const screens = document.querySelectorAll('.app-screen');
             screens.forEach(s => s.classList.remove('active'));
 
             const target = document.getElementById(`screen-${screenId}`);
-            if (target) { target.classList.add('active'); }
+            if (target) {
+                target.classList.add('active');
+            }
 
             const navBtns = document.querySelectorAll('.nav-btn');
             navBtns.forEach(b => b.classList.remove('text-kerry-gold', 'bg-kerry-cardBg'));
 
             const activeBtn = document.getElementById(`nav-${screenId}`);
-            if (activeBtn) { activeBtn.classList.add('text-kerry-gold', 'bg-kerry-cardBg'); }
+            if (activeBtn) {
+                activeBtn.classList.add('text-kerry-gold', 'bg-kerry-cardBg');
+            }
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function goToRun(runKey, weekNum) {
+        // Direct Deep-Link Navigation Helpers
+        function goToRun(runKey) {
             navigateTo('runs');
             switchRunTab(runKey);
         }
 
-        function goToGym(gymTabKey, weekNum) {
+        function goToGym(gymTabKey) {
             navigateTo('gym');
             switchGymTab(gymTabKey);
-            if(weekNum) setLogWeek(weekNum);
         }
 
+        // Gym Sub-Tabs Switcher
         function switchGymTab(tabKey) {
             document.getElementById('gym-content-lower').classList.add('hidden');
             document.getElementById('gym-content-upper').classList.add('hidden');
@@ -1035,16 +921,15 @@
 
             ['lower', 'upper', 'capacity'].forEach(b => {
                 const btn = document.getElementById(`gym-tab-${b}`);
-                if (btn) {
-                    if (b === tabKey) {
-                        btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md";
-                    } else {
-                        btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white";
-                    }
+                if (b === tabKey) {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md";
+                } else {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white";
                 }
             });
         }
 
+        // Run Sub-Tabs Switcher (5km Run, Interval Run 1, Interval Run 2)
         function switchRunTab(runKey) {
             const titleEl = document.getElementById('runTitle');
             const subEl = document.getElementById('runSub');
@@ -1058,37 +943,46 @@
             if (runKey === '5km') {
                 titleEl.innerText = "5KM RUN PROTOCOL";
                 subEl.innerText = "Target Protocol: All players within 20–22 minutes.";
-                l1.innerText = "Session Type"; v1.innerText = "Continuous Aerobic";
-                l2.innerText = "Target Completion Time"; v2.innerText = "20 – 22 Mins";
-                l3.innerText = "Total Distance Goal"; v3.innerText = "5.0 Kilometers";
+                l1.innerText = "Session Type";
+                v1.innerText = "Continuous Aerobic";
+                l2.innerText = "Target Completion Time";
+                v2.innerText = "20 – 22 Mins";
+                l3.innerText = "Total Distance Goal";
+                v3.innerText = "5.0 Kilometers";
             } else if (runKey === 'int1') {
                 titleEl.innerText = "INTERVAL RUN 1 (4 x 5' RUNS)";
                 subEl.innerText = "Target Protocol: 1.2km target distance per set.";
-                l1.innerText = "Interval Protocol"; v1.innerText = "4 x 5' Runs";
-                l2.innerText = "Recovery Window"; v2.innerText = "2' Recovery";
-                l3.innerText = "Target Distance / Set"; v3.innerText = "1.2km Target";
+                l1.innerText = "Interval Protocol";
+                v1.innerText = "4 x 5' Runs";
+                l2.innerText = "Recovery Window";
+                v2.innerText = "2' Recovery";
+                l3.innerText = "Target Distance / Set";
+                v3.innerText = "1.2km Target";
             } else if (runKey === 'int2') {
                 titleEl.innerText = "INTERVAL RUN 2 (4 x 4' RUNS)";
                 subEl.innerText = "Target Protocol: 1.0km target distance per set.";
-                l1.innerText = "Interval Protocol"; v1.innerText = "4 x 4' Runs";
-                l2.innerText = "Recovery Window"; v2.innerText = "2' Recovery";
-                l3.innerText = "Target Distance / Set"; v3.innerText = "1.0km Target";
+                l1.innerText = "Interval Protocol";
+                v1.innerText = "4 x 4' Runs";
+                l2.innerText = "Recovery Window";
+                v2.innerText = "2' Recovery";
+                l3.innerText = "Target Distance / Set";
+                v3.innerText = "1.0km Target";
             }
 
             ['5km', 'int1', 'int2'].forEach(key => {
                 const btn = document.getElementById(`run-tab-${key}`);
-                if (btn) {
-                    if (key === runKey) {
-                        btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md";
-                    } else {
-                        btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white";
-                    }
+                if (key === runKey) {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md";
+                } else {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white";
                 }
             });
         }
 
+        // Mobile Menu Drawer Toggle
         function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
         }
     </script>
 </body>

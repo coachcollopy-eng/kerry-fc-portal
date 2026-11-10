@@ -162,7 +162,7 @@
                     </div>
                 </button>
 
-                <!-- Desktop Navigation Tabs (STRICT ORDER: Overview -> Schedule -> Pitch Runs -> Gym Sessions -> Nutrition -> Targets & Compliance) -->
+                <!-- Desktop Navigation Tabs -->
                 <nav class="hidden lg:flex items-center gap-1">
                     <button onclick="navigateTo('overview')" id="nav-overview" class="nav-btn text-xs font-extrabold px-3.5 py-2.5 rounded-lg transition-all text-kerry-gold bg-kerry-cardBg">
                         <i class="fa-solid fa-compass mr-1.5 text-kerry-gold"></i> Overview
@@ -501,7 +501,6 @@
     <!-- ==================== TAB 3: PITCH RUNS ==================== -->
     <section id="screen-runs" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
         
-        <!-- Back to Schedule Button -->
         <div class="mb-4">
             <button onclick="navigateTo('schedule')" class="inline-flex items-center gap-2 bg-kerry-cardBg hover:bg-kerry-greenDark text-kerry-gold hover:text-white px-4 py-2 rounded-xl border border-kerry-cardBorder hover:border-kerry-gold text-xs font-bold transition-all shadow-lg hover:scale-105">
                 <i class="fa-solid fa-arrow-left"></i> Back to Schedule
@@ -515,7 +514,7 @@
                 <p class="text-xs text-gray-400 mt-0.5">Mandatory directive: Complete pitch running <strong>BEFORE</strong> gym lifting.</p>
             </div>
 
-            <!-- Sub-Tab Switcher (NO Pitch Session Option) -->
+            <!-- Sub-Tab Switcher -->
             <div class="flex items-center bg-kerry-navy p-1 rounded-xl border border-kerry-cardBorder">
                 <button onclick="switchRunTab('5km')" id="run-tab-5km" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md">5km Run</button>
                 <button onclick="switchRunTab('int1')" id="run-tab-int1" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white">Interval Run 1</button>
@@ -527,7 +526,6 @@
             <h3 id="runTitle" class="text-lg font-extrabold text-white">5KM RUN PROTOCOL</h3>
             <p id="runSub" class="text-xs text-emerald-400 font-bold mt-1">Target Protocol: All players within 20–22 minutes.</p>
 
-            <!-- Visual Distance/Interval Details -->
             <div class="mt-6 rounded-2xl p-6 bg-gradient-to-b from-emerald-900 via-emerald-950 to-kerry-navy border border-emerald-700/60 relative overflow-hidden">
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                     <div class="bg-emerald-950/90 p-4 rounded-xl border border-emerald-700">
@@ -547,7 +545,6 @@
                 </div>
             </div>
 
-            <!-- Build-Up Strides Protocol (PRESERVED) -->
             <div class="mt-6 p-5 rounded-xl bg-kerry-navy border border-kerry-cardBorder">
                 <h4 class="text-sm font-extrabold text-white flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-bolt text-kerry-gold"></i> BUILD-UP STRIDES PROGRESSION (60m)
@@ -565,7 +562,6 @@
     <!-- ==================== TAB 4: GYM SESSIONS ==================== -->
     <section id="screen-gym" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
         
-        <!-- Back to Schedule Button -->
         <div class="mb-4">
             <button onclick="navigateTo('schedule')" class="inline-flex items-center gap-2 bg-kerry-cardBg hover:bg-kerry-greenDark text-kerry-gold hover:text-white px-4 py-2 rounded-xl border border-kerry-cardBorder hover:border-kerry-gold text-xs font-bold transition-all shadow-lg hover:scale-105">
                 <i class="fa-solid fa-arrow-left"></i> Back to Schedule
@@ -579,7 +575,6 @@
                 <p class="text-xs text-gray-400 mt-0.5">Progressive Overload Mandatory: <strong>INCREASE WEIGHT EVERY WEEK</strong>.</p>
             </div>
             
-            <!-- Sub-Tab Switcher -->
             <div class="flex items-center bg-kerry-navy p-1 rounded-xl border border-kerry-cardBorder">
                 <button onclick="switchGymTab('lower')" id="gym-tab-lower" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md">Lower Body</button>
                 <button onclick="switchGymTab('upper')" id="gym-tab-upper" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white">Upper & Core</button>
@@ -595,7 +590,6 @@
                 </h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Exercise 1 (Hex Bar Squat / Front Squat linked to YouTube) -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Hex Bar Squat / Front Squat</h4>
@@ -606,7 +600,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 2 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Single-Leg RDL (Dumbbell)</h4>
@@ -617,7 +610,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 3 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Adductor Squat & Side Lunge</h4>
@@ -628,7 +620,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 4 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Glute Capacity Circuit</h4>
@@ -650,7 +641,6 @@
                 </h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Exercise 1 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Barbell / DB Bench Press</h4>
@@ -661,7 +651,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 2 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Bent-Over DB Row with Rotation</h4>
@@ -672,7 +661,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 3 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Med Ball Slams & Cable Pulls</h4>
@@ -683,7 +671,6 @@
                         </a>
                     </div>
 
-                    <!-- Exercise 4 -->
                     <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-sm font-bold text-kerry-gold">Sit-Up with Reach & Rotation</h4>

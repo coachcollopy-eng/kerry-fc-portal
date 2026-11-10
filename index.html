@@ -11,7 +11,7 @@
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Firebase SDK -->
+    <!-- Firebase SDK (Compat Version for HTML Browser Apps) -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 
@@ -161,10 +161,80 @@
                         </tr>
                     </thead>
                     <tbody class="text-xs font-semibold divide-y divide-kerry-cardBorder">
-                        <tr>
+                        <!-- WEEK 1 -->
+                        <tr class="hover:bg-kerry-navy/50">
                             <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80"><div class="font-extrabold text-white">WEEK 1</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('lower', 1)" class="w-full text-left p-2.5 rounded-lg bg-kerry-greenDark border border-emerald-600 hover:border-kerry-gold text-white text-[10px] font-bold shadow"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Lower Body</button></td>
-                            <td colspan="6" class="p-2 text-center text-gray-500 text-[10px]">Rest / Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('lower', 1)" class="w-full text-left p-2 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[10px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Lower</button></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('upper', 1)" class="w-full text-left p-2 rounded bg-amber-950/50 border border-amber-800 text-amber-200 text-[10px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper</button></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('lower', 1)" class="w-full text-left p-2 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[10px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Full Body</button></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-gray-500 uppercase">Rest</td>
+                            <td class="p-2 text-center text-gray-500 uppercase">Rest</td>
+                        </tr>
+                        <!-- WEEK 2 -->
+                        <tr class="hover:bg-kerry-navy/50">
+                            <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80"><div class="font-extrabold text-white">WEEK 2</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="flex flex-col gap-1">
+                                    <button onclick="goToRun('5km', 2)" class="p-1 rounded bg-emerald-950 border border-emerald-700 text-emerald-200 text-[9px] font-bold"><i class="fa-solid fa-person-running text-kerry-gold"></i> 5km Run</button>
+                                    <button onclick="goToGym('lower', 2)" class="p-1 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[9px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold"></i> Gym Lower</button>
+                                </div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('upper', 2)" class="w-full text-left p-2 rounded bg-amber-950/50 border border-amber-800 text-amber-200 text-[10px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper</button></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="flex flex-col gap-1">
+                                    <button onclick="goToRun('5km', 2)" class="p-1 rounded bg-emerald-950 border border-emerald-700 text-emerald-200 text-[9px] font-bold"><i class="fa-solid fa-person-running text-kerry-gold"></i> 5km Run</button>
+                                    <button onclick="goToGym('lower', 2)" class="p-1 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[9px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold"></i> Gym Full Body</button>
+                                </div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-gray-500 uppercase">Rest</td>
+                            <td class="p-2 text-center text-gray-500 uppercase">Rest</td>
+                        </tr>
+                        <!-- WEEK 3 -->
+                        <tr class="hover:bg-kerry-navy/50">
+                            <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80"><div class="font-extrabold text-white">WEEK 3</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="flex flex-col gap-1">
+                                    <button onclick="goToRun('int1', 3)" class="p-1 rounded bg-emerald-950 border border-emerald-700 text-emerald-200 text-[9px] font-bold"><i class="fa-solid fa-person-running text-kerry-gold"></i> Interval Run 1</button>
+                                    <button onclick="goToGym('lower', 3)" class="p-1 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[9px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold"></i> Gym Lower</button>
+                                </div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><button onclick="goToGym('upper', 3)" class="w-full text-left p-2 rounded bg-amber-950/50 border border-amber-800 text-amber-200 text-[10px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> Gym Upper</button></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <div class="flex flex-col gap-1">
+                                    <button onclick="goToRun('int2', 3)" class="p-1 rounded bg-emerald-950 border border-emerald-700 text-emerald-200 text-[9px] font-bold"><i class="fa-solid fa-person-running text-kerry-gold"></i> Interval Run 2</button>
+                                    <button onclick="goToGym('lower', 3)" class="p-1 rounded bg-kerry-greenDark border border-emerald-600 text-white text-[9px] font-bold"><i class="fa-solid fa-dumbbell text-kerry-gold"></i> Gym Full Body</button>
+                                </div>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-gray-500 uppercase">Rest</td>
+                            <td class="p-2 text-center text-gray-500 uppercase">Rest</td>
+                        </tr>
+                        <!-- WEEK 4 -->
+                        <tr class="hover:bg-kerry-navy/50">
+                            <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80"><div class="font-extrabold text-white">WEEK 4</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-gray-500 uppercase">Rest</td>
+                            <td class="p-2 text-center text-gray-500 uppercase">Rest</td>
+                        </tr>
+                        <!-- WEEK 5 -->
+                        <tr class="hover:bg-kerry-navy/50">
+                            <td class="p-3.5 border-r border-kerry-cardBorder bg-kerry-navy/80"><div class="font-extrabold text-white">WEEK 5</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center text-blue-300 text-[10px]">Active Recovery</td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600">Pitch & Gym</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded bg-amber-950/80 text-kerry-gold text-[10px] font-extrabold border border-kerry-gold/60">Pitch Session</div></td>
+                            <td class="p-2 text-center text-gray-500 uppercase">Rest</td>
                         </tr>
                     </tbody>
                 </table>
@@ -286,15 +356,16 @@
         <p class="font-bold text-gray-400">Kerry Football Club High Performance Department &copy; 2026</p>
     </footer>
 
-    <!-- JAVASCRIPT & FIREBASE -->
+    <!-- JAVASCRIPT & YOUR EXACT FIREBASE CONFIG -->
     <script>
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyA3FlYlPUCYmv_GdKM6G3h-5ZQ8TrHqSpA",
+            authDomain: "kerryfc-portal.firebaseapp.com",
+            projectId: "kerryfc-portal",
+            storageBucket: "kerryfc-portal.firebasestorage.app",
+            messagingSenderId: "363525444183",
+            appId: "1:363525444183:web:2ff41790125e5a191a0912",
+            measurementId: "G-NCN9H5ZBWR"
         };
 
         firebase.initializeApp(firebaseConfig);
@@ -314,7 +385,7 @@
             }
         }
 
-        // UPSERT LOGIC: Uses a composite ID (PlayerName_Exercise_Week) so updates overwrite instead of duplicate
+        // UPSERT LOGIC: Creates a unique composite key (PlayerName_Exercise_Week) so re-submitting overwrites instead of duplicating.
         function submitPlayerWeight(exerciseName, nameInputId, weightInputId) {
             const playerName = document.getElementById(nameInputId).value.trim();
             const weightVal = document.getElementById(weightInputId).value.trim();
@@ -324,7 +395,6 @@
                 return;
             }
 
-            // Create a unique clean ID for this player + exercise + week combination
             const cleanName = playerName.replace(/[^a-zA-Z0-9]/g, "");
             const cleanEx = exerciseName.replace(/[^a-zA-Z0-9]/g, "");
             const docId = `${cleanName}_${cleanEx}_Wk${selectedLogWeek}`;

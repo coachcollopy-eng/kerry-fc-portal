@@ -239,28 +239,28 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                 <div class="w-10 h-10 rounded-xl bg-kerry-green text-kerry-gold font-black text-lg flex items-center justify-center mb-4">1</div>
-                <h3 class="text-base font-extrabold text-white">MON & FRI: DUAL SESSIONS</h3>
-                <p class="text-xs text-emerald-400 font-bold mt-0.5">Pitch Running BEFORE Gym</p>
+                <h3 class="text-base font-extrabold text-white">MON/THU/SAT: GYM</h3>
+                <p class="text-xs text-amber-400 font-bold mt-0.5">Strength & Power Days</p>
                 <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    Pitch running sessions must be completed prior to lifting in the gym to ensure optimal power quality and high-speed running output.
+                    Log all workouts on RYPT by 5 PM. Focus on progressive overload and increasing weights each session.
                 </p>
             </div>
 
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                 <div class="w-10 h-10 rounded-xl bg-kerry-green text-kerry-gold font-black text-lg flex items-center justify-center mb-4">2</div>
-                <h3 class="text-base font-extrabold text-white">WED: GYM HYPERTROPHY</h3>
-                <p class="text-xs text-kerry-gold font-bold mt-0.5">Upper Body & Core Power</p>
+                <h3 class="text-base font-extrabold text-white">TUE & FRI: RUNNING</h3>
+                <p class="text-xs text-emerald-400 font-bold mt-0.5">Aerobic & Interval Protocols</p>
                 <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    Mid-week strength session targetting upper-body hypertrophy, thoracic mobility, and core strength without leg muscular fatigue.
+                    Complete scheduled running protocols and send verification to Keith by 5 PM daily.
                 </p>
             </div>
 
             <div class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                 <div class="w-10 h-10 rounded-xl bg-kerry-green text-kerry-gold font-black text-lg flex items-center justify-center mb-4">3</div>
-                <h3 class="text-base font-extrabold text-white">RECOVERY & REST</h3>
-                <p class="text-xs text-blue-400 font-bold mt-0.5">Tue/Thu Active, Sat/Sun Rest</p>
+                <h3 class="text-base font-extrabold text-white">WED & SUN: REST / OFF</h3>
+                <p class="text-xs text-blue-400 font-bold mt-0.5">Complete Recovery</p>
                 <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    Tuesdays and Thursdays are active mobility days. Saturdays and Sundays are dedicated to complete rest for optimal muscle repair.
+                    Dedicated to full rest, tissue repair, and meeting nutrition directives.
                 </p>
             </div>
         </div>
@@ -272,7 +272,7 @@
         <div class="mb-6">
             <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">OFF SEASON</span>
             <h2 class="text-2xl font-black text-white mt-1">5-WEEK SCHEDULE</h2>
-            <p class="text-xs text-emerald-400 font-semibold mt-0.5"><i class="fa-solid fa-circle-info mr-1"></i> Pitch running before gym lifting on dual days.</p>
+            <p class="text-xs text-emerald-400 font-semibold mt-0.5"><i class="fa-solid fa-circle-info mr-1"></i> All sessions must be logged and sent to Keith by 5 PM.</p>
         </div>
 
         <div class="bg-kerry-cardBg rounded-2xl border border-kerry-cardBorder overflow-hidden shadow-2xl">
@@ -300,23 +300,31 @@
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <button onclick="goToGym(1, 1)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 1
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 1 (Gym)
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToRun('5km')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
+                                </button>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <button onclick="goToGym(1, 2)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 2
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 2 (Gym)
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToRun('5km')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
+                                </button>
+                            </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
                                 <button onclick="goToGym(1, 3)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 3
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W1 Session 3 (Gym)
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
-                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                         </tr>
 
                         <!-- WEEK 2 -->
@@ -327,34 +335,32 @@
                                 <div class="text-[9px] text-kerry-gold font-bold mt-1 uppercase">REMOTE TRAINING</div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('5km')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
-                                    </button>
-                                    <button onclick="goToGym(2, 1)" class="w-full text-left p-1.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 1
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym(2, 2)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 2
+                                <button onclick="goToGym(2, 1)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 1 (Gym)
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('5km')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> 5km Run
-                                    </button>
-                                    <button onclick="goToGym(2, 3)" class="w-full text-left p-1.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 3
-                                    </button>
-                                </div>
+                                <button onclick="goToRun('int1')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 1
+                                </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
-                            <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym(2, 2)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 2 (Gym)
+                                </button>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToRun('int1')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 1
+                                </button>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym(2, 3)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W2 Session 3 (Gym)
+                                </button>
+                            </td>
+                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                         </tr>
 
                         <!-- WEEK 3 -->
@@ -365,34 +371,32 @@
                                 <div class="text-[9px] text-kerry-gold font-bold mt-1 uppercase">REMOTE TRAINING</div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('int1')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 1
-                                    </button>
-                                    <button onclick="goToGym(3, 1)" class="w-full text-left p-1.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 1
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <button onclick="goToGym(3, 2)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 2
+                                <button onclick="goToGym(3, 1)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 1 (Gym)
                                 </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center">
-                                <div class="flex flex-col gap-1.5">
-                                    <button onclick="goToRun('int2')" class="w-full text-left p-1.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 2
-                                    </button>
-                                    <button onclick="goToGym(3, 3)" class="w-full text-left p-1.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
-                                        <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 3
-                                    </button>
-                                </div>
+                                <button onclick="goToRun('int2')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 2
+                                </button>
                             </td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
-                            <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym(3, 2)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 2 (Gym)
+                                </button>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToRun('int2')" class="w-full text-left p-2.5 rounded-lg bg-emerald-950/90 border border-emerald-700 hover:border-kerry-gold text-emerald-200 text-[10px] font-bold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-person-running text-kerry-gold mr-1"></i> Interval Run 2
+                                </button>
+                            </td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center">
+                                <button onclick="goToGym(3, 3)" class="w-full text-left p-2.5 rounded-lg bg-amber-950/50 hover:bg-amber-900/60 text-amber-200 text-[10px] font-bold border border-amber-800/60 hover:border-kerry-gold transition-all hover:scale-105 shadow">
+                                    <i class="fa-solid fa-dumbbell text-kerry-gold mr-1"></i> W3 Session 3 (Gym)
+                                </button>
+                            </td>
+                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                         </tr>
 
                         <!-- WEEK 4 -->
@@ -403,12 +407,12 @@
                                 <div class="text-[9px] text-emerald-400 font-bold mt-1 uppercase">ON-SITE TRAINING</div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
-                            <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
+                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                         </tr>
 
                         <!-- WEEK 5 -->
@@ -419,12 +423,12 @@
                                 <div class="text-[9px] text-emerald-400 font-bold mt-1 uppercase">ON-SITE TRAINING</div>
                             </td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
-                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2 rounded-lg bg-blue-950/40 text-blue-300 text-[10px] font-bold border border-blue-900/40">Active Recovery</div></td>
+                            <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch & Gym</div></td>
                             <td class="p-2 border-r border-kerry-cardBorder text-center"><div class="p-2.5 rounded-lg bg-kerry-greenDark/80 text-white text-[10px] font-extrabold border border-emerald-600 shadow">Pitch Session</div></td>
-                            <td class="p-2 text-center"><div class="p-2 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">Rest</div></td>
+                            <td class="p-2 text-center"><div class="p-2.5 rounded-lg bg-gray-900 text-gray-500 text-[10px] font-bold uppercase">OFF</div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -445,7 +449,7 @@
             <div>
                 <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">RUNNING PROTOCOLS</span>
                 <h2 class="text-2xl font-black text-white mt-1">PITCH RUNS</h2>
-                <p class="text-xs text-gray-400 mt-0.5">Mandatory directive: Complete pitch running <strong>BEFORE</strong> gym lifting.</p>
+                <p class="text-xs text-gray-400 mt-0.5">Mandatory directive: Complete running sessions and send to Keith by 5 PM.</p>
             </div>
 
             <div class="flex items-center bg-kerry-navy p-1 rounded-xl border border-kerry-cardBorder">
@@ -478,18 +482,17 @@
 
             <div class="mt-6 p-5 rounded-xl bg-kerry-navy border border-kerry-cardBorder">
                 <h4 class="text-sm font-extrabold text-white flex items-center gap-2 mb-2">
-                    <i class="fa-solid fa-bolt text-kerry-gold"></i> BUILD-UP STRIDES PROGRESSION (60m)
+                    <i class="fa-solid fa-bolt text-kerry-gold"></i> COMPLIANCE REMINDER
                 </h4>
                 <p class="text-xs text-gray-300 leading-relaxed">
-                    Finish Friday running sessions with 4 x 60m build-up strides progressing velocity: <br>
-                    <span class="text-kerry-gold font-bold">Stride 1 (60% Max Speed) &rarr; Stride 2 (70%) &rarr; Stride 3 (80%) &rarr; Stride 4 (90% Top Velocity).</span>
+                    Remember to record your run and submit your data to Keith by <strong class="text-kerry-gold">5:00 PM</strong> on every running day.
                 </p>
             </div>
         </div>
     </section>
 
 
-    <!-- ==================== TAB 4: GYM SESSIONS (3-WEEK REMOTE PROGRAMME) ==================== -->
+    <!-- ==================== TAB 4: GYM SESSIONS (RYPT APP DISCLAIMER) ==================== -->
     <section id="screen-gym" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
         <div class="mb-4">
             <button onclick="navigateTo('schedule')" class="inline-flex items-center gap-2 bg-kerry-cardBg hover:bg-kerry-greenDark text-kerry-gold hover:text-white px-4 py-2 rounded-xl border border-kerry-cardBorder hover:border-kerry-gold text-xs font-bold transition-all shadow-lg hover:scale-105">
@@ -497,50 +500,28 @@
             </button>
         </div>
 
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>
-                <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">S&C REMOTE PROGRAMME</span>
-                <h2 class="text-2xl font-black text-white mt-1">GYM STRENGTH SESSIONS</h2>
-                <p class="text-xs text-gray-400 mt-0.5">Select Week & Session below to view prescribed exercises and key coaching points.</p>
+        <div class="mb-6">
+            <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">RYPT APP PORTAL</span>
+            <h2 class="text-2xl font-black text-white mt-1">GYM SESSIONS & WEIGHT TRACKING</h2>
+            <p class="text-xs text-gray-400 mt-0.5">All prescribed sessions are managed directly inside the RYPT app[cite: 9].</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-950/40 via-kerry-cardBg to-amber-950/40 p-8 rounded-3xl border border-kerry-gold/50 shadow-2xl text-center max-w-3xl mx-auto">
+            <div class="w-16 h-16 rounded-2xl bg-kerry-gold/20 text-kerry-gold border border-kerry-gold/50 flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg gold-glow">
+                <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
             
-            <!-- Week Selector -->
-            <div class="flex items-center bg-kerry-navy p-1 rounded-xl border border-kerry-cardBorder">
-                <button onclick="switchGymWeek(1)" id="gym-week-1" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md">Week 1</button>
-                <button onclick="switchGymWeek(2)" id="gym-week-2" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white">Week 2</button>
-                <button onclick="switchGymWeek(3)" id="gym-week-3" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white">Week 3</button>
-            </div>
-        </div>
-
-        <!-- Session Sub-Tabs -->
-        <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
-            <button onclick="switchGymSession(1)" id="gym-sess-btn-1" class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-950/80 text-kerry-gold border border-amber-800 shadow">Session 1 (Mon)</button>
-            <button onclick="switchGymSession(2)" id="gym-sess-btn-2" class="px-4 py-2 rounded-xl text-xs font-bold bg-kerry-navy text-gray-300 border border-kerry-cardBorder">Session 2 (Wed)</button>
-            <button onclick="switchGymSession(3)" id="gym-sess-btn-3" class="px-4 py-2 rounded-xl text-xs font-bold bg-kerry-navy text-gray-300 border border-kerry-cardBorder">Session 3 (Fri)</button>
-        </div>
-
-        <!-- Dynamic Gym Content Container -->
-        <div id="gym-content-container" class="bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
-            <!-- Injected via JavaScript -->
-        </div>
-
-        <!-- Warm-up / Flexibility Reference Accordion -->
-        <div class="mt-8 bg-kerry-cardBg p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
-            <h3 class="text-base font-extrabold text-white flex items-center gap-2 mb-3">
-                <i class="fa-solid fa-heart-pulse text-kerry-gold"></i> STANDARD WARM-UP & MOBILITY REFERENCE
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-3">
+                CHECK YOUR RYPT APP FOR ALL SESSIONS
             </h3>
-            <p class="text-xs text-gray-300 mb-4">Complete 5–7 mins mobility/activation before every session. Finish Week 3 Session 3 with the flexibility cool-down.</p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Deep Squat</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Reverse Lunges</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Side Lunge</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Glute Bridge</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> SL Leg Raises</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Ankle Rolls</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> 90/90s</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Worlds Greatest</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Supermans</div>
-                <div class="bg-kerry-navy p-2.5 rounded-lg border border-kerry-cardBorder text-gray-200"><i class="fa-solid fa-check text-kerry-gold mr-1.5"></i> Inchworms</div>
+            
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
+                Players must revert to the <strong>RYPT app</strong> to view your exact session details, exercises, and coaching notes[cite: 9]. 
+                Ensure you log your weights <strong>accurately and honestly</strong> for every exercise[cite: 9].
+            </p>
+
+            <div class="p-4 rounded-xl bg-kerry-navy border border-kerry-cardBorder text-xs text-kerry-gold font-extrabold inline-block">
+                <i class="fa-solid fa-bolt mr-1.5"></i> Challenge yourself by increasing weight each session!
             </div>
         </div>
     </section>
@@ -628,13 +609,13 @@
 
     <!-- ==================== TAB 6: TARGETS & COMPLIANCE ==================== -->
     <section id="screen-targets" class="app-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-grow">
-        <div class="bg-gradient-to-r from-red-950/60 via-kerry-cardBg to-red-950/60 p-6 sm:p-8 rounded-3xl border border-red-800/60 shadow-2xl">
+        <div class="bg-gradient-to-r from-kerry-cardBg via-kerry-navy to-kerry-cardBg p-6 sm:p-8 rounded-3xl border border-kerry-gold/40 shadow-2xl">
             <div class="flex items-center gap-3 mb-6">
-                <div class="w-12 h-12 rounded-2xl bg-red-900/60 border border-red-700 flex items-center justify-center text-red-300 text-2xl shrink-0">
+                <div class="w-12 h-12 rounded-2xl bg-kerry-gold/20 border border-kerry-gold/50 flex items-center justify-center text-kerry-gold text-2xl shrink-0">
                     <i class="fa-solid fa-bullseye"></i>
                 </div>
                 <div>
-                    <span class="bg-red-900 text-red-200 text-[10px] font-black px-2 py-0.5 rounded uppercase">MANDATORY POLICY</span>
+                    <span class="bg-kerry-gold text-kerry-navy text-[10px] font-black px-2 py-0.5 rounded uppercase">MANDATORY POLICY</span>
                     <h2 class="text-2xl font-black text-white mt-0.5">TARGETS & COMPLIANCE RULES</h2>
                 </div>
             </div>
@@ -642,29 +623,29 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-kerry-navy p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                     <div class="flex items-center gap-2 mb-3">
-                        <i class="fa-solid fa-mobile-screen-button text-kerry-gold text-xl"></i>
-                        <h3 class="text-base font-extrabold text-white">RYPT APP SESSION TRACKING</h3>
+                        <i class="fa-solid fa-clock text-kerry-gold text-xl"></i>
+                        <h3 class="text-base font-extrabold text-white">DAILY 5 PM DEADLINE</h3>
                     </div>
                     <p class="text-xs text-gray-300 leading-relaxed">
-                        Every player must log their workout completion via the official <strong>RYPT App</strong> at the end of every scheduled training day.
+                        Every running session must be sent to <strong>Keith</strong>, and every gym session must be completed and logged (with accurate weights) on the RYPT app by <strong class="text-kerry-gold">5:00 PM</strong> every single day[cite: 9].
                     </p>
                     <div class="mt-4 p-3.5 bg-kerry-cardBg rounded-xl border border-kerry-cardBorder text-xs text-emerald-400 font-bold flex items-center gap-2">
                         <i class="fa-solid fa-circle-check text-kerry-gold"></i>
-                        <span>Gym Sessions - Weights being tracked</span>
+                        <span>Strict adherence required for staff tracking</span>
                     </div>
                 </div>
 
-                <div class="bg-kerry-navy p-6 rounded-2xl border border-red-800/60 shadow-xl">
+                <div class="bg-kerry-navy p-6 rounded-2xl border border-kerry-cardBorder shadow-xl">
                     <div class="flex items-center gap-2 mb-3">
-                        <i class="fa-solid fa-weight-scale text-red-400 text-xl"></i>
-                        <h3 class="text-base font-extrabold text-white">BODY FAT TARGET: &le; 14%</h3>
+                        <i class="fa-solid fa-weight-scale text-kerry-gold text-xl"></i>
+                        <h3 class="text-base font-extrabold text-white">BODY WEIGHT TARGET: &le; +5%</h3>
                     </div>
                     <p class="text-xs text-gray-300 leading-relaxed">
-                        Body composition and skinfold testing will be conducted on Day 1 of Pre-Season (Monday, December 28, 2026).
+                        Since baseline weights were measured from before the season ended, <strong>Body Weight must increase by no more than 5%</strong> upon return to training[cite: 9].
                     </p>
-                    <div class="mt-4 p-3.5 bg-red-950/90 rounded-xl border border-red-700 text-xs text-red-200 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-triangle-exclamation text-kerry-gold"></i>
-                        <span>Exceeding 14% incurs an immediate 1-WEEK WAGE FINE.</span>
+                    <div class="mt-4 p-3.5 bg-emerald-950/60 rounded-xl border border-emerald-800/60 text-xs text-emerald-300 font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-kerry-gold"></i>
+                        <span>Maintains power-to-weight ratio for pre-season readiness.</span>
                     </div>
                 </div>
             </div>
@@ -711,197 +692,6 @@
 
         function goToGym(weekNum, sessionNum) {
             navigateTo('gym');
-            switchGymWeek(weekNum);
-            switchGymSession(sessionNum);
-        }
-
-        // Gym Programme Data Structure
-        const gymData = {
-            1: {
-                1: {
-                    title: "WEEK 1 - SESSION 1 (MONDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Pogo Hops", sets: "3x10", notes: "Mid Foot Landing, As little time on the floor as possible" },
-                        { name: "Deadlift", sets: "3x8", notes: "Back straight, Chest forward, head up. Controlled Lowering" },
-                        { name: "Back Squat", sets: "3x8", notes: "Use support if needed get depth, Slow on the way down" },
-                        { name: "Box Step Up", sets: "2x8 e/s", notes: "Controlled movement & balance" },
-                        { name: "Chin Ups", sets: "3x8", notes: "Full range of motion" },
-                        { name: "DB Bench Press", sets: "3x8", notes: "Controlled coming down" },
-                        { name: "Seated Calf Raise", sets: "3x12", notes: "Controlled coming down 2-3s" },
-                        { name: "Pallof Press", sets: "2x10 e/s", notes: "Anti-rotation hold and press" }
-                    ]
-                },
-                2: {
-                    title: "WEEK 1 - SESSION 2 (WEDNESDAY)",
-                    warmup: "Warm Up (Mobility, Activation) | 6-8 mins",
-                    exercises: [
-                        { name: "BW CMJ (Countermovement Jump)", sets: "4x4", notes: "Explosive vertical jump" },
-                        { name: "Hang High Pull", sets: "4x4", notes: "Bar Speed not weight" },
-                        { name: "Split Squat", sets: "3x8 e/s", notes: "Controlled descent" },
-                        { name: "Hip Thrust", sets: "3x8", notes: "Explode Up, hold, slow down" },
-                        { name: "Medball Rotational Throw", sets: "3x4 e/s", notes: "Power transfer through hips" },
-                        { name: "Landmine Press", sets: "3x8 e/s", notes: "Single-arm shoulder press angle" },
-                        { name: "Inverted Row", sets: "3x10", notes: "Fast up, slow down" },
-                        { name: "Tib Raises", sets: "3x20", notes: "Shin activation" }
-                    ]
-                },
-                3: {
-                    title: "WEEK 1 - SESSION 3 (FRIDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "BSS (Bulgarian Split Squat)", sets: "3x6 e/s", notes: "Rear foot elevated, upright torso" },
-                        { name: "RDL (Romanian Deadlift)", sets: "3x8", notes: "Fast Up, Slow Down" },
-                        { name: "Hamstring Curls", sets: "2x6", notes: "Controlled Up, Explode Down" },
-                        { name: "Long Lever Copenhagen Adduction", sets: "3x6 e/s", notes: "Groin strength hold" },
-                        { name: "Single arm row", sets: "3x8 e/s", notes: "Dumbbell pull to hip" },
-                        { name: "Incline DB Bench Press", sets: "3x8", notes: "Controlled Coming Down" },
-                        { name: "Calf Raise Hold", sets: "3x30s", notes: "Isometric ankle strength" },
-                        { name: "Deadbug", sets: "2x8", notes: "Core stability" }
-                    ]
-                }
-            },
-            2: {
-                1: {
-                    title: "WEEK 2 - SESSION 1 (MONDAY)",
-                    warmup: "Warm Up (Mobility, Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Lateral Bounds", sets: "3x4 e/s", notes: "Stick The Landing firmly" },
-                        { name: "Superset: Trapbar Deadlift + CMJ", sets: "4x5 / 4x3", notes: "Pair heavy pull with explosive jump" },
-                        { name: "Superset: Back Squat + Box Jumps", sets: "3x5 / 3x3", notes: "Squat strength paired with rebound power" },
-                        { name: "Weighted Chin Up", sets: "4x5", notes: "Controlled ascent with load" },
-                        { name: "Bench Press", sets: "4x5", notes: "Barbell pressing power" },
-                        { name: "Seated Calf Raises", sets: "3x10", notes: "Controlled Coming Down 2-3s" },
-                        { name: "Pallof Press", sets: "2x10 e/s", notes: "Core anti-rotation" }
-                    ]
-                },
-                2: {
-                    title: "WEEK 2 - SESSION 2 (WEDNESDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Box Jumps", sets: "4x4", notes: "Step Down and reset each rep" },
-                        { name: "Hang High Pull", sets: "5x3", notes: "Explosive triple extension" },
-                        { name: "DB Squat Jumps", sets: "4x4", notes: "Weighted explosive jump" },
-                        { name: "Hip Thrust", sets: "3x6", notes: "Glute power output" },
-                        { name: "Medball Chest Pass", sets: "3x5", notes: "Upper body explosive power" },
-                        { name: "Military Press", sets: "4x5", notes: "Strict overhead pressing" },
-                        { name: "Copenhagen Adduction", sets: "3x6 e/s", notes: "Adductor strengthening" }
-                    ]
-                },
-                3: {
-                    title: "WEEK 2 - SESSION 3 (FRIDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Broad Jump", sets: "4x3", notes: "Reset each time, not continuous" },
-                        { name: "Split Squat", sets: "3x5 e/s", notes: "Unilateral leg strength" },
-                        { name: "RDL", sets: "3x6", notes: "Posterior chain loading" },
-                        { name: "Hamstring Curl", sets: "3x6", notes: "Knee flexion strength" },
-                        { name: "Incline Bench Press", sets: "3x6", notes: "Upper chest angle" },
-                        { name: "BB Row", sets: "3x8", notes: "Bent-over barbell row" },
-                        { name: "SL Calf Raise", sets: "3x8 e/s", notes: "Single-leg ankle strength" },
-                        { name: "Weighted Deadbug", sets: "2x15", notes: "Advanced core control" }
-                    ]
-                }
-            },
-            3: {
-                1: {
-                    title: "WEEK 3 - SESSION 1 (MONDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Drop Jumps", sets: "4x4", notes: "40cm box ideally, focus on getting off the ground fast rather than height" },
-                        { name: "Superset: Trapbar Deadlift + CMJ", sets: "4x3 / 4x3", notes: "Peak power output pairing" },
-                        { name: "Superset: Back Squat + Broad Jump", sets: "3x3 / 3x3", notes: "Max strength into horizontal power" },
-                        { name: "B Stance RDL", sets: "3x6 e/s", notes: "Unilateral hinge mechanics" },
-                        { name: "Weighted Pull Up", sets: "4x4", notes: "Upper body pulling strength" },
-                        { name: "Bench Press", sets: "4x3", notes: "Heavy lower-rep strength" },
-                        { name: "Seated Calf Raises", sets: "3x6", notes: "Heavy calf loading" }
-                    ]
-                },
-                2: {
-                    title: "WEEK 3 - SESSION 2 (WEDNESDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Lateral Bounds", sets: "3x3 e/s", notes: "Lateral explosiveness" },
-                        { name: "Hang Power Clean (or Hang High Pull)", sets: "5x3", notes: "Full body explosive power" },
-                        { name: "Trapbar Jumps", sets: "4x3", notes: "Loaded jump output" },
-                        { name: "Hip Thrust", sets: "3x4", notes: "Heavy hip extension" },
-                        { name: "Med Ball Rotational Throw", sets: "4x3 e/s", notes: "Rotational power" },
-                        { name: "Push Press", sets: "4x3", notes: "Dynamic overhead press" },
-                        { name: "Bench Throw", sets: "3x4", notes: "30% 1RM explosive output" }
-                    ]
-                },
-                3: {
-                    title: "WEEK 3 - SESSION 3 (FRIDAY)",
-                    warmup: "Warm Up (Mobility/Activation) | 5-7 mins",
-                    exercises: [
-                        { name: "Broad Jump", sets: "4x3", notes: "Horizontal distance focus" },
-                        { name: "Split Squats", sets: "3x5 e/s", notes: "Unilateral strength block" },
-                        { name: "RDL", sets: "3x6", notes: "Posterior chain loading" },
-                        { name: "Hamstring Curl", sets: "3x8", notes: "Repetitive knee flexion" },
-                        { name: "Copenhagen Adductions", sets: "3x8 e/s", notes: "Groin durability" },
-                        { name: "Weighted Chin Up", sets: "3x5", notes: "Upper body pulling" },
-                        { name: "Incline Bench Press", sets: "3x5", notes: "Incline pressing" },
-                        { name: "SL Calf Raises", sets: "3x8 e/s", notes: "Single-leg ankle strength" }
-                    ]
-                }
-            }
-        };
-
-        let currentGymWeek = 1;
-        let currentGymSession = 1;
-
-        function switchGymWeek(wk) {
-            currentGymWeek = wk;
-            for (let i = 1; i <= 3; i++) {
-                const btn = document.getElementById(`gym-week-${i}`);
-                if (btn) {
-                    btn.className = (i === wk) ? "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-kerry-green text-white shadow-md" : "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white";
-                }
-            }
-            renderGymSession();
-        }
-
-        function switchGymSession(sessNum) {
-            currentGymSession = sessNum;
-            for (let i = 1; i <= 3; i++) {
-                const btn = document.getElementById(`gym-sess-btn-${i}`);
-                if (btn) {
-                    btn.className = (i === sessNum) ? "px-4 py-2 rounded-xl text-xs font-bold bg-amber-950/80 text-kerry-gold border border-amber-800 shadow" : "px-4 py-2 rounded-xl text-xs font-bold bg-kerry-navy text-gray-300 border border-kerry-cardBorder";
-                }
-            }
-            renderGymSession();
-        }
-
-        function renderGymSession() {
-            const container = document.getElementById('gym-content-container');
-            const data = gymData[currentGymWeek][currentGymSession];
-
-            let html = `
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-kerry-cardBorder pb-4">
-                    <h3 class="text-lg font-extrabold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-dumbbell text-kerry-gold"></i> ${data.title}
-                    </h3>
-                    <span class="text-xs bg-emerald-950/80 text-emerald-300 px-3 py-1 rounded-lg border border-emerald-700 font-bold">${data.warmup}</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            `;
-
-            data.exercises.forEach(ex => {
-                html += `
-                    <div class="bg-kerry-navy p-4 rounded-xl border border-kerry-cardBorder flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <h4 class="text-sm font-bold text-kerry-gold">${ex.name}</h4>
-                                <span class="text-[11px] bg-kerry-cardBorder px-2.5 py-0.5 rounded font-black text-white">${ex.sets}</span>
-                            </div>
-                            <p class="text-xs text-gray-300 mt-2"><strong class="text-gray-400">Key Points:</strong> ${ex.notes}</p>
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += `</div>`;
-            container.innerHTML = html;
         }
 
         // Run Sub-Tabs Switcher (5km Run, Interval Run 1, Interval Run 2)
@@ -952,11 +742,6 @@
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
-
-        // Initialise Gym Tab on load
-        window.onload = function() {
-            renderGymSession();
-        };
     </script>
 </body>
 </html>
